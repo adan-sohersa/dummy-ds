@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/adan-sohersa"
   },
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "",
   "main": "dist/csj/index.js",
   "module": "dist/esm/index.js",
