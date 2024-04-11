@@ -12,7 +12,7 @@ Since this package is currently wrapping the **NextUI** *Components Library*, th
 
 Include the package in your dependencies via your preferred package manager.
 
-		npm i @adan-sohersa/dummy-design-system
+	npm i @adan-sohersa/dummy-design-system
 
 ### Tailwind Setup
 
