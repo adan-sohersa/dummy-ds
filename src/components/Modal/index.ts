@@ -1,7 +1,7 @@
 export {
-	ModalBackdrop,
-	ModalShadow,
 	ModalSize,
+	ModalShadow,
+	ModalBackdrop,
 	ModalProps,
 	default as Modal,
 } from "./Modal"

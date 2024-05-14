@@ -1,7 +1,13 @@
-'use client'
-
 import React, { type ReactNode, type FC } from 'react'
-import Button, { type ButtonVariants, type ButtonColors, type ButtonSize, type ButtonRadius, type ButtonProps } from '@/src/general/infraestructure/ui/react/Button'
+import {
+	Button,
+	type ButtonVariants,
+	type ButtonColors,
+	type ButtonSize,
+	type ButtonRadius,
+	type ButtonProps
+} from '../Button'
+
 import {
 	ModalContent,
 	ModalHeader,
@@ -102,5 +108,5 @@ const Modal: FC<ModalProps> = (props: ModalProps) => {
 		</>
 	)
 }
-export type { ModalSize, ModalShadow, ModalBackdrop, ModalProps }
-export default Modal
+
+export type { ModalSize, ModalShadow, ModalBackdrop, ModalProps, Modal as default }
