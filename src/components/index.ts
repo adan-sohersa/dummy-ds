@@ -13,5 +13,7 @@ export * from "./Input";
 export * from "./ListBox";
 export * from "./ListBoxItem";
 export * from "./Modal";
+export * from "./Select";
+export * from "./SelectItem";
 export * from "./Toggle";
 export * from "./ThemeSwitcher";
