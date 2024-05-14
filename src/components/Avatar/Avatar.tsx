@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import { Avatar as NexuiAvatar } from '@nextui-org/react'
 
@@ -39,7 +37,7 @@ const Avatar: React.FC<AvatarProps> = (props: AvatarProps) => {
 	const { photo, size, disabled, bordered, radiusSize, color, optionalText } = props
 	return <NexuiAvatar
 		src={photo ?? ''}
-		size={size ?? 'md'}
+		size={size ?? AvatarSizes.md}
 		isDisabled={disabled}
 		isBordered={bordered}
 		radius={radiusSize ?? AvatarRadius.full}
