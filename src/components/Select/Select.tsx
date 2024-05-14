@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { FocusEventHandler } from 'react'
 import { Select as NextuiSelect } from '@nextui-org/react'
 
-export enum SelectColors {
+enum SelectColors {
 	default = 'default',
-	foreground = 'foreground',
 	primary = 'primary',
 	secondary = 'secondary',
 	success = 'success',
@@ -11,7 +10,7 @@ export enum SelectColors {
 	danger = 'danger'
 }
 
-export enum SelectSize {
+enum SelectSize {
 	small = 'sm',
 	medium = 'md',
 	large = 'lg'
@@ -21,12 +20,12 @@ interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
 	children: any
 	height?: SelectSize
 	color?: SelectColors
-	onFocus?: any
-	onBlur?: any
+	onFocus?: FocusEventHandler<Element>
+	onBlur?: FocusEventHandler<Element>
 }
 
 const Select = React.forwardRef<HTMLSelectElement, SelectProps>((props: SelectProps, ref) => {
-	const { children, color, height, size, multiple, ...rest } = props
+	const { children, height, size, multiple, ...rest } = props
 	return (
 		<NextuiSelect
 			size={height ?? SelectSize.large}
@@ -40,4 +39,4 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>((props: SelectPr
 
 Select.displayName = 'Select'
 
-export {Select as default, SelectProps}
+export { SelectColors, SelectSize, SelectProps, Select as default }

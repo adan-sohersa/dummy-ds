@@ -1,7 +1,8 @@
 import React, { type ReactNode, type FC } from 'react'
 import { SelectItem as NextUISelectItem } from '@nextui-org/react'
+import type { Key } from '@react-types/shared'
 
-export enum SelectItemColors {
+enum SelectItemColors {
 	default = 'default',
 	primary = 'primary',
 	secondary = 'secondary',
@@ -12,18 +13,23 @@ export enum SelectItemColors {
 
 interface SelectItemProps extends React.OptionHTMLAttributes<Element> {
 	children: ReactNode
-	key: any
-	disabled?: boolean
+	key: Key
 	label?: string | undefined
-	selected?: boolean | undefined
+	readonly?: boolean
 	value?: string | number
 	color?: SelectItemColors
 }
 
- const SelectItem: FC<SelectItemProps> = (props: SelectItemProps) => {
-	const { children, ...rest } = props
+const SelectItem: FC<SelectItemProps> = (props: SelectItemProps) => {
+	const { children, readonly, ...rest } = props
 	return (
-		<NextUISelectItem {...rest}>{children}</NextUISelectItem>
+		<NextUISelectItem
+			isReadOnly={readonly}
+			{...rest}
+		>
+			{children}
+		</NextUISelectItem>
 	)
 }
-export {SelectItem as default, SelectItemProps}
+
+export { SelectItemColors, SelectItemProps, SelectItem as default }
