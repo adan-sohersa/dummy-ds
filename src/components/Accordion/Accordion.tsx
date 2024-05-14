@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import type { FC } from 'react'
 import { Accordion as NextuiAccordion } from '@nextui-org/react'
@@ -28,6 +26,7 @@ interface AccordionProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Accordion: FC<AccordionProps> = (props: AccordionProps) => {
+
 	const {
 		children,
 		animated,
@@ -41,8 +40,7 @@ const Accordion: FC<AccordionProps> = (props: AccordionProps) => {
 		disableAnimation={
 			typeof animated === 'boolean' ? !animated : false}
 		selectionMode={
-			typeof multipleSelecction === 'boolean' &&
-				multipleSelecction
+			typeof multipleSelecction === 'boolean' && multipleSelecction
 				? 'multiple'
 				: 'single'
 		}

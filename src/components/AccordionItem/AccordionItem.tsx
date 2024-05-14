@@ -1,17 +1,15 @@
-'use client'
-import React, { type ReactNode, type FC } from 'react'
+import React, { type ReactNode, type FC, MouseEventHandler } from 'react'
 import { AccordionItem as NextUIAccordionItem } from '@nextui-org/react'
 
-interface AccordionItemProps extends React.HTMLAttributes<HTMLDivElement> {
+interface AccordionItemProps extends React.HTMLAttributes<HTMLButtonElement> {
 	children: ReactNode
-	key?: React.Key | null | undefined
+	key?: React.Key | null | undefined,
 }
 
  const AccordionItem: FC<AccordionItemProps> = (props: AccordionItemProps) => {
-	const { children } = props
-	const { key } = props
+	const { children, onFocus, onBlur, ...rest } = props
 	return (
-		<NextUIAccordionItem key= {key}>{children}</NextUIAccordionItem>
+		<NextUIAccordionItem {...rest}>{children}</NextUIAccordionItem>
 	)
 }
 export {AccordionItem as desfault, AccordionItemProps}
