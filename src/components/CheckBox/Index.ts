@@ -3,4 +3,4 @@ export {
 	CheckBoxSize,
 	CheckBoxProps,
 	default as CheckBox,
-} from"./CheckBox"
+} from "./CheckBox"

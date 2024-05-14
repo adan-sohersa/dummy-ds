@@ -2,13 +2,13 @@ import React from 'react'
 import type { ReactNode, FC, FocusEventHandler } from 'react'
 import { Checkbox as NextUiCheckBox } from '@nextui-org/react'
 
-export enum CheckBoxSize {
+enum CheckBoxSize {
 	small = 'sm',
 	medium = 'md',
 	large = 'lg'
 }
 
-export enum CheckBoxColors {
+enum CheckBoxColors {
 	default = 'default',
 	primary = 'primary',
 	secondary = 'secondary',
@@ -27,7 +27,7 @@ interface CheckBoxProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	onBlur?: FocusEventHandler<Element>
 }
 
-export const CheckBox: FC<CheckBoxProps> = (props: CheckBoxProps) => {
+const CheckBox: FC<CheckBoxProps> = (props: CheckBoxProps) => {
 	const {
 		children,
 		checked,
@@ -52,4 +52,4 @@ export const CheckBox: FC<CheckBoxProps> = (props: CheckBoxProps) => {
 		>{children}</NextUiCheckBox>
 	)
 }
-export {CheckBoxProps, CheckBox as default}
+export { CheckBoxSize, CheckBoxColors, CheckBoxProps, CheckBox as default}
