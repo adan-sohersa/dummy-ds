@@ -1,10 +1,21 @@
 import React from 'react'
 import type { ReactNode, FC, HTMLAttributeAnchorTarget, FocusEventHandler } from 'react'
 import { ListboxItem as NextUIListboxItem } from '@nextui-org/react'
+import type { Key } from '@react-types/shared';
+
+enum ListboxItemColors {
+	default = 'default',
+	primary = 'primary',
+	secondary = 'secondary',
+	success = 'success',
+	warning = 'warning',
+	danger = 'danger'
+}
 
 interface ListboxItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
 	children: ReactNode
-	key: string | number
+	key: Key
+	color?: ListboxItemColors
 	description?: string | ReactNode
 	startContent?: ReactNode
 	endContent?: ReactNode
@@ -22,7 +33,6 @@ interface ListboxItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
 		children,
 		withDivider,
 		readOnly,
-		color,
 		...rest
 	} = props
 	return (
@@ -35,4 +45,4 @@ interface ListboxItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
 		</NextUIListboxItem>
 	)
 }
-export {ListboxItem as default, ListboxItemProps}
+export { ListboxItemColors, ListboxItemProps, ListboxItem as default }

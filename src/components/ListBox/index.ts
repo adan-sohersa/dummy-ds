@@ -1,7 +1,7 @@
 export {
+	ListboxVariants,
 	ListboxColors,
 	ListBoxMode,
-	ListboxVariants,
 	ListboxProps,
 	default as ListBox,
 } from "./ListBox"

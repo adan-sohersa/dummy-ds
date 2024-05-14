@@ -1,9 +1,7 @@
 import React, { type ReactNode, type FC, type FocusEventHandler } from 'react'
-import {
-	Listbox as NextUIListbox
-} from '@nextui-org/react'
+import { Listbox as NextUIListbox } from '@nextui-org/react'
 
-export enum ListboxVariants {
+enum ListboxVariants {
 	solid = 'solid',
 	bordered = 'bordered',
 	light = 'light',
@@ -12,7 +10,7 @@ export enum ListboxVariants {
 	shadow = 'shadow'
 }
 
-export enum ListboxColors {
+enum ListboxColors {
 	default = 'default',
 	primary = 'primary',
 	secondary = 'secondary',
@@ -21,7 +19,7 @@ export enum ListboxColors {
 	danger = 'danger'
 }
 
-export enum ListBoxMode {
+enum ListBoxMode {
 	none = 'none',
 	single = 'single',
 	multiple = 'multiple'
@@ -59,4 +57,4 @@ const Listbox: FC<ListboxProps> = (props: ListboxProps) => {
 	</NextUIListbox>
 }
 
-export { Listbox as default, ListboxProps }
+export { ListboxVariants, ListboxColors, ListBoxMode, ListboxProps, Listbox as default }
