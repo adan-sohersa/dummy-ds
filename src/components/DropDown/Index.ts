@@ -1,6 +1,6 @@
-export{
+export {
 	DropDownColors,
 	DropDownVariants,
 	DropDownProps,
-	Dropdown as default
+	default as DropDown
 } from "./DropDown"
