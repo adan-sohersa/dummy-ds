@@ -1,5 +1,3 @@
-'use client'
-
 import React, { type FC, type ReactNode } from 'react'
 import { Link as NextuiLink } from '@nextui-org/react'
 
@@ -41,4 +39,5 @@ export const Anchor: FC<AnchorProps> = (props: AnchorProps) => {
 		</NextuiLink>
 	)
 }
+
 export {Anchor as default}

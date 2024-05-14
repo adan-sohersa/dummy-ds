@@ -1,4 +1,4 @@
-export{
+export {
 	AnchorColors,
 	AnchorSizes,
 	AnchorProps,
