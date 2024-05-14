@@ -1,3 +1,5 @@
+export * from "./Accordion";
+export * from "./AccordionItem";
 export * from "./Anchor";
 export * from "./Avatar";
 export * from "./Button";
