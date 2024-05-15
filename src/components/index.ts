@@ -15,5 +15,7 @@ export * from "./ListBoxItem";
 export * from "./Modal";
 export * from "./Select";
 export * from "./SelectItem";
+export * from "./Tab";
+export * from "./Tabs";
 export * from "./Toggle";
 export * from "./ThemeSwitcher";
