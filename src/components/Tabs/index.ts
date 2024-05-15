@@ -1,7 +1,7 @@
 export {
+	TabsVariant,
 	TabsColors,
 	TabsSize,
-	TabsVariant,
 	TabsProps,
 	default as Tabs,
 } from "./Tabs"

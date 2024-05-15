@@ -1,15 +1,16 @@
 import React from 'react'
 import { type FC, type ReactNode } from 'react'
 import { Tabs as NextuiTabs } from '@nextui-org/react'
+import { type Key } from '@react-types/shared'
 
-export enum TabsVariant {
+enum TabsVariant {
 	solid = 'solid',
 	bordered = 'bordered',
 	light = 'light',
 	underlined = 'underlined'
 }
 
-export enum TabsColors {
+enum TabsColors {
 	default = 'default',
 	primary = 'primary',
 	secondary = 'secondary',
@@ -18,31 +19,26 @@ export enum TabsColors {
 	danger = 'danger'
 }
 
-export enum TabsSize {
+enum TabsSize {
 	small = 'sm',
 	medium = 'md',
 	large = 'lg'
 }
 
-interface TabsProps extends React.SelectHTMLAttributes<Element> {
+interface TabsProps extends React.SelectHTMLAttributes<HTMLDivElement> {
 	children: ReactNode
-	key?: React.Key | null | undefined
 	variant?: TabsVariant
 	color?: TabsColors
 	height?: TabsSize
 	fullWidth?: boolean
-	disabledKeys?: any
-	selectedKey?: React.Key | null
-	defaultSelectedKey?: React.Key
+	disabledKeys?: Key[]
+	selectedKey?: Key
+	defaultSelectedKey?: Key
 	disabled?: boolean
 	animated?: boolean
-	onChange?: any
-	onCopy?: any
-	onCopyCapture?: any
-	onSelectionChange: (key: React.Key) => any
 }
 
-export const Tabs: FC<TabsProps> = (props: TabsProps) => {
+const Tabs: FC<TabsProps> = (props: TabsProps) => {
 	const {
 		children,
 		disabled,
@@ -66,4 +62,5 @@ export const Tabs: FC<TabsProps> = (props: TabsProps) => {
 		</NextuiTabs>
 	)
 }
-export {TabsProps, Tabs as default}
+
+export { TabsVariant, TabsColors, TabsSize, TabsProps, Tabs as default}

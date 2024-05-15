@@ -3,5 +3,7 @@ export * from "./Card";
 export * from "./DSProvider";
 export * from "./Icons";
 export * from "./Input";
+export * from "./Tabs"
+export * from "./Tab"
 export * from "./Toggle";
 export * from "./ThemeSwitcher";

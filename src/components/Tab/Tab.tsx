@@ -6,16 +6,12 @@ interface TabProps extends React.OptionHTMLAttributes<Element> {
 	tabLabel?: ReactNode
 	titleValue?: string
 	href?: string
-	rel?: string
-	ping?: string
-	download?: boolean | string
 }
 
 const Tab: FC<TabProps> = (props: TabProps) => {
 	const {
 		children,
 		tabLabel,
-		title,
 		...rest
 	} = props
 	return (
@@ -26,4 +22,5 @@ const Tab: FC<TabProps> = (props: TabProps) => {
 			{children}</NextuiTab>
 	)
 }
+
 export {TabProps, Tab as default}
