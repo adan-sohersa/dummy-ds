@@ -40,7 +40,7 @@ enum ModalBackdrop {
 
 interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {
 	// Intrinsic properties
-	closingCallback?: (...args: any) => any
+	closingCallback?: (...args: any) => void
 	children: ReactNode
 	actions?: ButtonProps[]
 	title?: string
@@ -69,7 +69,8 @@ const Modal: FC<ModalProps> = (props: ModalProps) => {
 		buttonColor,
 		buttonSize,
 		buttonRadius,
-		buttonDisabled
+		buttonDisabled,
+		closingCallback,
 	} = props
 	return (
 		<>
@@ -80,9 +81,10 @@ const Modal: FC<ModalProps> = (props: ModalProps) => {
 				isDismissable={false}
 				backdrop={backdrop ?? ModalBackdrop.opaque}
 				size={size}
+				onClose={closingCallback}
 			>
 				<ModalContent>
-					{onClose => (
+					{
 						<>
 							<ModalHeader className='flex flex-col gap-1'>{title}</ModalHeader>
 							<ModalBody>
@@ -102,11 +104,11 @@ const Modal: FC<ModalProps> = (props: ModalProps) => {
 								})}
 							</ModalFooter>}
 						</>
-					)}
+					}
 				</ModalContent>
 			</NextUiModal>
 		</>
 	)
 }
 
-export type { ModalSize, ModalShadow, ModalBackdrop, ModalProps, Modal as default }
+export { type ModalSize, type ModalShadow, type ModalBackdrop, type ModalProps, Modal as default }
